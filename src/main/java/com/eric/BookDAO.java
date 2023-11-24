@@ -24,7 +24,7 @@ public class BookDAO {
     protected void connect() throws SQLException {
         if (jdbConnection == null || jdbConnection.isClosed()) {
             try {
-                Class.forName(""); //insert the database driver
+                Class.forName("com.mysql.cj.jdbc.Driver"); //insert the database driver
             } catch (ClassNotFoundException e) {
                 throw new SQLException(e);
             }
