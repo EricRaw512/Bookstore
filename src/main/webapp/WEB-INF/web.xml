@@ -16,7 +16,7 @@
   
   <context-param>
       <param-name>jdbcPassword</param-name>
-      <param-value>root</param-value> <!--insert your database password-->
+      <param-value>admin</param-value> <!--insert your database password-->
   </context-param>
 
   <servlet>
