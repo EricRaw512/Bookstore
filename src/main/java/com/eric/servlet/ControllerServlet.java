@@ -27,8 +27,6 @@ public class ControllerServlet extends HttpServlet{
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getServletPath();
-        System.out.println("helloo");
-        System.out.println(action);
 
         try {
             switch (action) {
@@ -69,7 +67,6 @@ public class ControllerServlet extends HttpServlet{
     private void showEditBook(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {
         int id = Integer.parseInt(request.getParameter("id"));
         Book book = bookDAO.getBook(id);
-        System.out.println(book.getTitle());
         RequestDispatcher dispatcher = request.getRequestDispatcher("BookForm.jsp");
         request.setAttribute("book", book);
         dispatcher.forward(request, response);
@@ -98,7 +95,6 @@ public class ControllerServlet extends HttpServlet{
     }
 
     private void listBook(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
-        System.out.println("hello");
         List<Book> listBook = bookDAO.listAllBook();
         request.setAttribute("listbook", listBook);
         RequestDispatcher dispatcher = request.getRequestDispatcher("Bookstore.jsp");

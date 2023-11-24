@@ -6,17 +6,17 @@
 
   <context-param>
     <param-name>jdbcURL</param-name>
-    <param-value></param-value> <!--insert your database URL-->
+    <param-value>library_management</param-value> <!--insert your database URL-->
   </context-param>
 
   <context-param>
       <param-name>jdbcUsername</param-name>
-      <param-value></param-value> <!--insert your database username-->
+      <param-value>root</param-value> <!--insert your database username-->
   </context-param>
   
   <context-param>
       <param-name>jdbcPassword</param-name>
-      <param-value></param-value> <!--insert your database password-->
+      <param-value>admin</param-value> <!--insert your database password-->
   </context-param>
 
   <servlet>
